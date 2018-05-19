@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/SendPasswordEmail"
+            android:textSize="20dp"
+            android:layout_marginTop="50dp"/>
+
+        <EditText
+            android:id="@+id/userEmail_Edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Email"
+            android:layout_marginTop="20dp"/>
+
+
+        <Button
+            android:id="@+id/send_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/buttonwithcorners"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/Send"
+            android:textColor="@color/White"
+            android:textSize="20dp"
+            android:textStyle="italic|normal|bold" />
+
+    </LinearLayout>
+
+
+</ScrollView>

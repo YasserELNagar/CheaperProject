@@ -1,0 +1,26 @@
+<resources>
+    <!-- Strings related to login -->
+    <string name="app_name">Cheaper</string>
+    <string name="Or">أو</string>
+    <string name="ContinueWithFacebook">متابعة بحساب فيسبوك</string>
+    <string name="Name">الاسم</string>
+    <string name="Password">كلمة المرور</string>
+    <string name="DidYouForgetYourPassword">هل نسيت كلمة السر ؟</string>
+    <string name="Enter">دخول</string>
+    <string name="AreYouNewUser">هل أنت جديد على أرخصلى ؟</string>
+    <string name="CreateNewAccount">إنشاء حساب</string>
+    <string name="title_activity_login2">Sign in</string>
+    <string name="Email">البريد الإلكترونى</string>
+    <string name="PhoneNumber">رقم الجوال</string>
+    <string name="ConfirmPassword">تأكيد كلمة المرور</string>
+    <string name="Signup">تسجيل</string>
+    <string name="ImageSuccessfullyChoosed">تم اختيار الصورة بنجاح</string>
+    <string name="ImageFailedChoosed">لم يتم اختيار الصورة بنجاح!!</string>
+    <string name="ChooseImage">اختيار الصورة</string>
+    <string name="ImageChooseOptions">هل تريد التقاط صورة لك ام اختيار صورة من الاستوديو ؟</string>
+    <string name="TakePhoto">التقاط صورة</string>
+    <string name="Cancel">إلغاء</string>
+    <string name="SendPasswordEmail">يرجى كتابة البريد الإلكترونى الخاص بك المرتبط بأرخصلى وسيتم إرسال رابط إليك لتعديل كلمة المرور</string>
+    <string name="Send">إرسال</string>
+    <string name="PasswordSentSuccess">لقد تم إرسال كلمة السر لك بنجاح</string>
+</resources>
