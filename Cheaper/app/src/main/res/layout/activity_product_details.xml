@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.example.unknown.cheaper.ImageSlider.ProductDetails">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#000"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/slider"
+        android:layout_height="wrap_content">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true" />
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/pager"
+            tools:ignore="UnknownId" />
+    </RelativeLayout>
+
+
+    <!-- Start product informations-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/slider"
+        android:orientation="vertical"
+        android:background="#fff"
+        android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:weightSum="3"
+    android:layout_margin="10dp"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:text="حذاء اديدس سبرينج بلاد"
+        android:id="@+id/productdescriptions"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:text="@string/Product"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+        <!--second row-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="3"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:text="مول العرب"
+                android:id="@+id/storedescriptions"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="@string/store"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!--third row-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="3"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:text="حذاء اديدس سبرينج بلاد
+اسود اللون يساعد ع الاتزان
+                            "
+                android:id="@+id/productescriptions"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="@string/product_descriptions"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+      <!-- 4 row -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="3"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:text="150جنيه"
+                android:id="@+id/pricebeforeoffere"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="@string/Price_Bfore"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <!-- 5 row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="3"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:text="100جنيه"
+                android:id="@+id/priceaafterffere"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="@string/Price_Aftter"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <GridView
+        android:layout_width="match_parent"
+        android:id="@+id/clall"
+        android:numColumns="2"
+        android:layout_height="wrap_content"></GridView>
+</LinearLayout>
+    </LinearLayout>
+    <!-- End product informations-->
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
