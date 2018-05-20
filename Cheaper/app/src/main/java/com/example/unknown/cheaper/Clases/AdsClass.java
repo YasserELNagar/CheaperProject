@@ -1,4 +1,4 @@
-package com.example.unknown.cheaper;
+package com.example.unknown.cheaper.Clases;
 
 public class AdsClass {
 

@@ -1,15 +1,28 @@
 package com.example.unknown.cheaper;
 
+import android.app.ActionBar;
+import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.example.unknown.cheaper.Clases.NavItemsClass;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,9 +30,10 @@ import java.util.HashMap;
 import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
+    Button btn;
 
     private static final String TAG ="HomeActivity";
-
+    DrawerLayout mDrawerLayout;
     private SectionsPageAdapter mSectionsPageAdapter;
 
     private ViewPager mViewPager;
@@ -33,9 +47,9 @@ public class HomeActivity extends AppCompatActivity {
     private ExpandableListView listView_stores_catgories;
     private ExpandableListAdapter listAdapter;
     ListView listViews;
-    ArrayList<String> ContentantItems;
+    ArrayList<NavItemsClass> ContentantItems;
     ListView listViews2;
-    ArrayList<String> ContentantItems2;
+    ArrayList<NavItemsClass> ContentantItems2;
     List<String> Departments_Childs;
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listHash;
@@ -69,7 +83,6 @@ public class HomeActivity extends AppCompatActivity {
         checkAuthorizations();
 
 
-
     }
 
     private void setupViewPager(ViewPager viewPager){
@@ -89,27 +102,26 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
-        ContentantItems = new ArrayList<>(Arrays.asList(
-                new String(getString(R.string.HOME_PAGE)),
-                new String(getString(R.string.SIGN_IN)),
-                new String(getString(R.string.Stores))
+        ContentantItems = new ArrayList<NavItemsClass>(Arrays.asList(
+                new NavItemsClass(getString(R.string.HOME_PAGE),R.drawable.ic_home_black_24dp),
+                new NavItemsClass(getString(R.string.SIGN_IN),R.drawable.login_icon),
+                new NavItemsClass(getString(R.string.Stores), R.drawable.store)
 
         ));
 
 
-        ContentantItems2 = new ArrayList<>(Arrays.asList(
+        ContentantItems2 = new ArrayList<NavItemsClass>(Arrays.asList(
 
-                new String(getString(R.string.Search)),
-                new String(getString(R.string.Contact_us))
+                new NavItemsClass(getString(R.string.Search),R.drawable.ic_search_black_24dp),
+                new NavItemsClass(getString(R.string.Contact_us),R.drawable.contact_us_icon)
         ));
 
 
-        listViews.setAdapter(new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, ContentantItems));
+        NavigationItemsAdapter adapter = new NavigationItemsAdapter(getApplicationContext(),ContentantItems);
+        listViews.setAdapter(adapter);
+        NavigationItemsAdapter adapter2 = new NavigationItemsAdapter(getApplicationContext(),ContentantItems2);
 
-
-        listViews2.setAdapter(new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, ContentantItems2));
+        listViews2.setAdapter(adapter2);
 
 
         listDataHeader = new ArrayList<>();
@@ -136,8 +148,8 @@ public class HomeActivity extends AppCompatActivity {
     private void checkAuthorizations() {
         if (state == true) {
             ContentantItems.remove(1);
-            ContentantItems2.add(getString(R.string.Notification));
-            ContentantItems2.add(getString(R.string.SIGN_OUT));
+            ContentantItems2.add(new NavItemsClass (getString(R.string.Notification),R.drawable.ic_notifications_none_black_24dp));
+            ContentantItems2.add(new NavItemsClass (getString(R.string.SIGN_OUT),R.drawable.siginout_icon));
 
             listAdapter.notifyDataSetChanged();
 
@@ -155,14 +167,14 @@ public class HomeActivity extends AppCompatActivity {
         listViews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if (ContentantItems.get(i).toString().equals(getString(R.string.HOME_PAGE).toString())) {
+                if (ContentantItems.get(i).getName().equals(getString(R.string.HOME_PAGE).toString())) {
                     // Home page
                     Toast.makeText(HomeActivity.this, getString(R.string.HOME_PAGE).toString(), Toast.LENGTH_SHORT).show();
-                } else if (ContentantItems.get(i).toString().equals(getString(R.string.SIGN_IN))) {
+                } else if (ContentantItems.get(i).getName().equals(getString(R.string.SIGN_IN))) {
                     //SIGN_IN Page
                     Toast.makeText(HomeActivity.this, getString(R.string.SIGN_IN).toString(), Toast.LENGTH_SHORT).show();
 
-                } else if (ContentantItems.get(i).toString().equals(getString(R.string.Stores))) {
+                } else if (ContentantItems.get(i).getName().equals(getString(R.string.Stores))) {
                     //Stores Page
                     Toast.makeText(HomeActivity.this, getString(R.string.Stores).toString(), Toast.LENGTH_SHORT).show();
 
@@ -176,19 +188,22 @@ public class HomeActivity extends AppCompatActivity {
         listViews2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if (ContentantItems2.get(i).toString().equals(getString(R.string.Search))) {
+                String s=ContentantItems2.get(i).toString();
+
+                if (ContentantItems2.get(i).getName().equals(getString(R.string.Search))) {
                     //Search Page
+
                     Toast.makeText(HomeActivity.this, getString(R.string.Search).toString(), Toast.LENGTH_SHORT).show();
 
-                } else if (ContentantItems2.get(i).toString().equals(getString(R.string.Contact_us))) {
+                } else if (ContentantItems2.get(i).getName().equals(getString(R.string.Contact_us))) {
                     //Contact_us Page
                     Toast.makeText(HomeActivity.this, getString(R.string.Contact_us).toString(), Toast.LENGTH_SHORT).show();
 
-                } else if (ContentantItems2.get(i).toString().equals(getString(R.string.SIGN_OUT))) {
+                } else if (ContentantItems2.get(i).getName().equals(getString(R.string.SIGN_OUT))) {
                     //Return To Home Page Or sigin page
                     Toast.makeText(HomeActivity.this, getString(R.string.SIGN_OUT).toString(), Toast.LENGTH_SHORT).show();
 
-                } else if (ContentantItems2.get(i).toString().equals(getString(R.string.Notification))) {
+                } else if (ContentantItems2.get(i).getName().equals(getString(R.string.Notification))) {
                     //Return Notification page
                     Toast.makeText(HomeActivity.this, getString(R.string.Notification).toString(), Toast.LENGTH_SHORT).show();
 
