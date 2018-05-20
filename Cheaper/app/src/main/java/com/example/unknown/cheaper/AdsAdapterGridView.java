@@ -1,6 +1,7 @@
 package com.example.unknown.cheaper;
 
 import android.content.Context;
+import android.graphics.Paint;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,6 +55,7 @@ public class AdsAdapterGridView extends ArrayAdapter {
         viewholder.productname.setText((String.valueOf(currentAds.getProductName())));
         viewholder.storename.setText((String.valueOf(currentAds.getStoreName())));
         viewholder.price_before_offer.setText((String.valueOf(currentAds.getPrice_befor_offer())));
+        viewholder.price_before_offer.setPaintFlags(viewholder.price_before_offer.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         viewholder.price_after_offer.setText((String.valueOf(currentAds.getPrice_after_offer())));
         //viewholder.image.setImageResource(currentAds.getImage());
 
