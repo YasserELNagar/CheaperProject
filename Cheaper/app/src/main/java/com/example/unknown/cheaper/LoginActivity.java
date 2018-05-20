@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -51,6 +52,18 @@ public class LoginActivity extends AppCompatActivity {
                 Intent intent = new Intent(LoginActivity.this,SignupActivity.class);
                 startActivity(intent);
 
+            }
+        });
+
+
+        //open Home Activity
+
+        signin_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -104,5 +117,6 @@ public class LoginActivity extends AppCompatActivity {
         createNewAccount_Textview=findViewById(R.id.createNewAccount_Textview);
         signinWithFacebook_Textview=findViewById(R.id.signinWithFacebook_Textview);
         signinWithFacebook_Imageview=findViewById(R.id.signinWithFacebook_Imageview);
+
     }
 }
