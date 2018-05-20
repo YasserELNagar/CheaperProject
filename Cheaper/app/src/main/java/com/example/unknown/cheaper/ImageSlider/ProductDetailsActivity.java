@@ -17,7 +17,7 @@ import java.util.TimerTask;
 
 import me.relex.circleindicator.CircleIndicator;
 
-public class ProductDetails extends AppCompatActivity {
+public class ProductDetailsActivity extends AppCompatActivity {
     private static ViewPager mPager;
     ArrayList<String> stores;
     GridView gridView;
@@ -38,7 +38,7 @@ public class ProductDetails extends AppCompatActivity {
         stores = new ArrayList<>(Arrays.asList(
                 new String("القاهره"),
                 new String("ابها")));
-        callgridviewadapter adapter = new callgridviewadapter(ProductDetails.this,stores);
+        callgridviewadapter adapter = new callgridviewadapter(ProductDetailsActivity.this,stores);
         gridView.setAdapter(adapter);
     }
 
@@ -48,7 +48,7 @@ public class ProductDetails extends AppCompatActivity {
             XMENArray.add(XMEN[i]);
 
         mPager = (ViewPager) findViewById(R.id.pager);
-        mPager.setAdapter(new imageadapter(ProductDetails.this,XMENArray));
+        mPager.setAdapter(new imageadapter(ProductDetailsActivity.this,XMENArray));
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         indicator.setViewPager(mPager);
 

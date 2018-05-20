@@ -32,12 +32,79 @@ public class Navigation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
-        listView_stores_catgories = (ExpandableListView) findViewById(R.id.expandableListView);
-        listViews = (ListView) findViewById(R.id.listofitems);
-        listViews2 = (ListView) findViewById(R.id.listofitems2);
-        initData();
+
+
+        GetViewElements();
+
+        initializeData();
+
+        HandleDrawerClicks();
+
+        checkAuthorizations();
+    }
+
+
+
+    // fill childs wirh data in ("extendable list view") and listview elements
+    private void initializeData() {
+
         listAdapter = new ExpandableListAdapter(this, listDataHeader, listHash);
         listView_stores_catgories.setAdapter(listAdapter);
+
+        ContentantItems = new ArrayList<>(Arrays.asList(
+                new String(getString(R.string.HOME_PAGE)),
+                new String(getString(R.string.SIGN_IN)),
+                new String(getString(R.string.Stores))
+
+        ));
+
+
+        ContentantItems2 = new ArrayList<>(Arrays.asList(
+
+                new String(getString(R.string.Search)),
+                new String(getString(R.string.Contact_us))
+        ));
+
+
+        listViews.setAdapter(new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, ContentantItems));
+
+
+        listViews2.setAdapter(new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, ContentantItems2));
+
+
+        listDataHeader = new ArrayList<>();
+        listHash = new HashMap<>();
+        listDataHeader.add(getString(R.string.Departments));
+
+        Departments_Childs = new ArrayList<>();
+        Departments_Childs.add(getString(R.string.MobilesAndAcsseories));
+        Departments_Childs.add(getString(R.string.watches));
+        Departments_Childs.add(getString(R.string.JewelleryAndAccessories));
+        Departments_Childs.add(getString(R.string.ShoesAndBags));
+
+        listHash.put(listDataHeader.get(0), Departments_Childs);
+
+    }
+    // if he siginedin the list will remove sigin item
+    private void checkAuthorizations() {
+        if (state == true) {
+            ContentantItems.remove(1);
+            ContentantItems2.add(getString(R.string.Notification));
+            ContentantItems2.add(getString(R.string.SIGN_OUT));
+
+            listAdapter.notifyDataSetChanged();
+
+        } else {
+
+        }
+
+    }
+
+
+    //this method handles clicks and movements between activities
+    private void HandleDrawerClicks(){
 
         //   List part1 clicks Handle
         listViews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -112,58 +179,12 @@ public class Navigation extends AppCompatActivity {
             }
         });
 
-
-        checkAuthorizations();
     }
-    // fill childs wirh data in ("extendable list view")
-    private void initData() {
 
-        ContentantItems = new ArrayList<>(Arrays.asList(
-                new String(getString(R.string.HOME_PAGE)),
-                new String(getString(R.string.SIGN_IN)),
-                new String(getString(R.string.Stores))
-
-        ));
-
-
-        ContentantItems2 = new ArrayList<>(Arrays.asList(
-
-                new String(getString(R.string.Search)),
-                new String(getString(R.string.Contact_us))
-        ));
-
-
-        listViews.setAdapter(new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, ContentantItems));
-
-
-        listViews2.setAdapter(new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, ContentantItems2));
-
-
-        listDataHeader = new ArrayList<>();
-        listHash = new HashMap<>();
-        listDataHeader.add(getString(R.string.Departments));
-
-        Departments_Childs = new ArrayList<>();
-        Departments_Childs.add(getString(R.string.MobilesAndAcsseories));
-        Departments_Childs.add(getString(R.string.watches));
-        Departments_Childs.add(getString(R.string.JewelleryAndAccessories));
-        Departments_Childs.add(getString(R.string.ShoesAndBags));
-
-        listHash.put(listDataHeader.get(0), Departments_Childs);
-
-    }
-    // if he siginedin the list will remove sigin item
-    private void checkAuthorizations() {
-        if (state == true) {
-            ContentantItems.remove(1);
-            ContentantItems2.add(getString(R.string.Notification));
-            ContentantItems2.add(getString(R.string.SIGN_OUT));
-        } else {
-
-        }
-
+    private  void GetViewElements(){
+        listView_stores_catgories = (ExpandableListView) findViewById(R.id.expandableListView);
+        listViews = (ListView) findViewById(R.id.listofitems);
+        listViews2 = (ListView) findViewById(R.id.listofitems2);
     }
 
 

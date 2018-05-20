@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".HomeActivity" />
-        <activity android:name=".ImageSlider.ProductDetails"/>
+        <activity android:name=".ImageSlider.ProductDetailsActivity"/>
         <activity android:name=".Navigation"/>
         <activity android:name=".SplashScreenActivity">
             <intent-filter>

@@ -27,9 +27,9 @@
 
         android:layout_height="match_parent">
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
     <ListView
@@ -55,7 +55,7 @@
         android:layout_alignParentStart="true"
         android:id="@+id/listofitems2"
         android:layout_below="@+id/expandableListView" />
-</RelativeLayout>
+    </RelativeLayout>
     </android.support.design.widget.NavigationView>
 
 
