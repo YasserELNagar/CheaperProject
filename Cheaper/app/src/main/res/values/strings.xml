@@ -65,5 +65,7 @@
     <string name="product_descriptions">المواصفات</string>
     <string name="Price_Bfore">السعر قبل العرض</string>
     <string name="Price_Aftter">السعر بعد العرض</string>
+    <string name="SorrySigninFirstToCall">عفوا قم بتسجيل الدخول حتى يمكنك الاتصال</string>
+    <string name="NewAccount">حساب جديد</string>
 
 </resources>

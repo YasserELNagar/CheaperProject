@@ -15,7 +15,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.unknown.cheaper.Classes.UserClass;
+
 public class LoginActivity extends AppCompatActivity {
+
+    public static UserClass CurrentUser;
+
 
     EditText name_Edittext;
     EditText password_Edittext;
@@ -62,8 +67,15 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                CurrentUser= new UserClass(1,"Yasser Mohamed","Yasser EL-Nagar","yasser@gmail.com","123");
+
+
                 Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
                 startActivity(intent);
+
+
+
+
             }
         });
 
