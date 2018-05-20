@@ -34,4 +34,34 @@
     <string name="AllAds">كل الإعلانات</string>
     <string name="TodayAds">إعلانات اليوم</string>
 
+    //////////////////////////
+    <string name="title_activity_navigation">navigation</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <!--   navigation drawer list-->
+    <string name="HOME_PAGE">الصفحه الرئيسيه</string>
+    <string name="SIGN_IN">تسجيل الدخول</string>
+    <string name="SIGN_OUT">تسجيل الخروج</string>
+    <string name="Notification"> الاشعارات</string>
+    <string name="Stores">المتاجر</string>
+    <string name="Departments">اقسام المنتجات</string>
+    <string name="Search">البحث </string>
+    <string name="Contact_us">تواصل معنا </string>
+
+    <!--   Departments Types list-->
+    <string name="MobilesAndAcsseories">الموبايلات والاكسسوارات</string>
+    <string name="watches">الساعات والاكسسوارات</string>
+    <string name="JewelleryAndAccessories">المجوهرات والاكسسوارات</string>
+    <string name="ShoesAndBags"> الشنط والاحذيه</string>
+
+    <!-- product details-->
+    <string name="Product">المنتج</string>
+    <string name="store">المتجر</string>
+    <string name="product_descriptions">المواصفات</string>
+    <string name="Price_Bfore">السعر قبل العرض</string>
+    <string name="Price_Aftter">السعر بعد العرض</string>
+
 </resources>
