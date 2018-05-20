@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".HomeActivity"
+    android:id="@+id/navigation"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,8 +14,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-       <include layout="@layout/actionbar"/>
-
+        <include layout="@layout/actionbar"/>
 
             <android.support.design.widget.AppBarLayout
                 android:id="@+id/appbar"
@@ -56,9 +56,13 @@
 
     <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginTop="50dp"
+        android:id="@+id/nav"
+        android:layout_gravity=""
+        android:textDirection="rtl"
+        android:layoutDirection="ltr"
+        android:background="#fff"
         android:layout_height="match_parent">
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -66,13 +70,11 @@
 
 
             <ListView
+                android:id="@+id/listofitems"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/listofitems"
 
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                />
+                android:layout_below="@+id/lineaimg" />
 
             <ExpandableListView
                 android:layout_width="match_parent"
@@ -88,7 +90,45 @@
                 android:layout_alignParentStart="true"
                 android:id="@+id/listofitems2"
                 android:layout_below="@+id/expandableListView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/lineaimg"
+                android:background="#333"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profilepicture"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                   android:layout_gravity="center"
+                    android:src="@drawable/person"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FF000000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=" ياسر محمد "
+                    android:textColor="#fff"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=" yasser999@gmail.com "
+                    android:textColor="#fff"
+                    android:maxLines="1"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
         </RelativeLayout>
+
     </android.support.design.widget.NavigationView>
 
 

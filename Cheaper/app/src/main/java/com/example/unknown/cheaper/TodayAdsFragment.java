@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
+import com.example.unknown.cheaper.Clases.AdsClass;
 import com.example.unknown.cheaper.ImageSlider.ProductDetailsActivity;
 
 import java.util.ArrayList;

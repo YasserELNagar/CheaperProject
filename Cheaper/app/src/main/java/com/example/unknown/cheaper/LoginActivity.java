@@ -26,9 +26,9 @@ public class LoginActivity extends AppCompatActivity {
     EditText password_Edittext;
     TextView forgetPassword_textView;
     Button signin_btn;
-    TextView createNewAccount_Textview;
-    TextView signinWithFacebook_Textview;
-    ImageView signinWithFacebook_Imageview;
+    Button createNewAccount_btn;
+
+    Button signinWithFacebook_btn;
 
 
     EditText userEmail_Edittext;
@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         //open sginup activity
-        createNewAccount_Textview.setOnClickListener(new View.OnClickListener() {
+        createNewAccount_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -126,9 +126,8 @@ public class LoginActivity extends AppCompatActivity {
         password_Edittext=findViewById(R.id.password_Edittext);
         forgetPassword_textView=findViewById(R.id.forgetPassword_textView);
         signin_btn=findViewById(R.id.signin_btn);
-        createNewAccount_Textview=findViewById(R.id.createNewAccount_Textview);
-        signinWithFacebook_Textview=findViewById(R.id.signinWithFacebook_Textview);
-        signinWithFacebook_Imageview=findViewById(R.id.signinWithFacebook_Imageview);
+        createNewAccount_btn=findViewById(R.id.createNewAccount_btn);
+        signinWithFacebook_btn=findViewById(R.id.signin_facebookbtn);
 
     }
 }

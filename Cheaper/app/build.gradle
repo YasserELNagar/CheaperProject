@@ -29,4 +29,9 @@ dependencies {
 
     //dependency for CircleIndicator  image slider indicators
     compile 'me.relex:circleindicator:1.2.2@aar'
+    //dependency for CircleImage
+
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+
 }
