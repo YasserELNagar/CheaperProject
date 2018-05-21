@@ -10,6 +10,8 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -50,7 +52,7 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
 
-
+        RemoveRequired();
     }
 
 
@@ -159,6 +161,117 @@ public class SignupActivity extends AppCompatActivity {
     }
 
 
+    private  void RemoveRequired(){
 
+        email_Edittext.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(email_Edittext.getText().toString().length()>1) {
+                    email_Edittext.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.opened_email, 0);
+                }
+                else {
+
+                    email_Edittext.setCompoundDrawablesWithIntrinsicBounds(R.drawable.reqired, 0, R.drawable.opened_email, 0);
+
+                }
+
+
+            }
+        });
+
+        phone_Edittext.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(phone_Edittext.getText().toString().length()>1) {
+                    phone_Edittext.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.smartphone_call, 0);
+                }
+                else {
+
+                    phone_Edittext.setCompoundDrawablesWithIntrinsicBounds(R.drawable.reqired, 0, R.drawable.smartphone_call, 0);
+
+                }
+
+
+            }
+        });
+
+        password_Edittext.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(password_Edittext.getText().toString().length()>1) {
+                    password_Edittext.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.padlock, 0);
+                }
+                else {
+
+                    password_Edittext.setCompoundDrawablesWithIntrinsicBounds(R.drawable.reqired, 0, R.drawable.padlock, 0);
+
+                }
+
+
+            }
+        });
+
+
+        retypePassword_Edittext.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(retypePassword_Edittext.getText().toString().length()>1) {
+                    retypePassword_Edittext.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.padlock, 0);
+                }
+                else {
+
+                    retypePassword_Edittext.setCompoundDrawablesWithIntrinsicBounds(R.drawable.reqired, 0, R.drawable.padlock, 0);
+
+                }
+
+
+            }
+        });
+
+    }
 
 }
