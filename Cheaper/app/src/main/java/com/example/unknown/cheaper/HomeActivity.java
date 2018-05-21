@@ -35,7 +35,7 @@ public class HomeActivity extends AppCompatActivity {
     private static final String TAG ="HomeActivity";
     DrawerLayout mDrawerLayout;
     private SectionsPageAdapter mSectionsPageAdapter;
-
+    Button btn_left_openNav;
     private ViewPager mViewPager;
 
 
@@ -81,6 +81,17 @@ public class HomeActivity extends AppCompatActivity {
         HandleDrawerClicks();
 
         checkAuthorizations();
+
+
+        View view = findViewById(R.id.actionbarlayout);
+        btn_left_openNav =(Button)findViewById(R.id.btn_left) ;
+        btn_left_openNav.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mDrawerLayout.openDrawer(Gravity.RIGHT);
+                }
+            });
+
 
 
     }
@@ -245,6 +256,8 @@ public class HomeActivity extends AppCompatActivity {
         listView_stores_catgories = (ExpandableListView) findViewById(R.id.expandableListView);
         listViews = (ListView) findViewById(R.id.listofitems);
         listViews2 = (ListView) findViewById(R.id.listofitems2);
+        mDrawerLayout=(DrawerLayout)findViewById(R.id.navigation);
+
     }
 
 /////////////////////////////////
