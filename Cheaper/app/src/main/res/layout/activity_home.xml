@@ -73,7 +73,6 @@
                 android:id="@+id/listofitems"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:layout_below="@+id/lineaimg" />
 
             <ExpandableListView

@@ -113,7 +113,7 @@ public class HomeActivity extends AppCompatActivity {
         ContentantItems2 = new ArrayList<NavItemsClass>(Arrays.asList(
 
                 new NavItemsClass(getString(R.string.Search),R.drawable.ic_search_black_24dp),
-                new NavItemsClass(getString(R.string.Contact_us),R.drawable.contact_us_icon)
+                new NavItemsClass(getString(R.string.Contact_us),R.drawable.ic_chat_24dp)
         ));
 
 
@@ -149,7 +149,7 @@ public class HomeActivity extends AppCompatActivity {
         if (state == true) {
             ContentantItems.remove(1);
             ContentantItems2.add(new NavItemsClass (getString(R.string.Notification),R.drawable.ic_notifications_none_black_24dp));
-            ContentantItems2.add(new NavItemsClass (getString(R.string.SIGN_OUT),R.drawable.siginout_icon));
+            ContentantItems2.add(new NavItemsClass (getString(R.string.SIGN_OUT),R.drawable.ic_exit_to_app_24dp));
 
             listAdapter.notifyDataSetChanged();
 
