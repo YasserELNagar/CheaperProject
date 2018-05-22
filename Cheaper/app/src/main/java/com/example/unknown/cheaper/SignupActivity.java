@@ -205,11 +205,11 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if(phone_Edittext.getText().toString().length()>1) {
-                    phone_Edittext.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.smartphone_call, 0);
+                    phone_Edittext.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.smartphone, 0);
                 }
                 else {
 
-                    phone_Edittext.setCompoundDrawablesWithIntrinsicBounds(R.drawable.reqired, 0, R.drawable.smartphone_call, 0);
+                    phone_Edittext.setCompoundDrawablesWithIntrinsicBounds(R.drawable.reqired, 0, R.drawable.smartphone, 0);
 
                 }
 
@@ -232,11 +232,11 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if(password_Edittext.getText().toString().length()>1) {
-                    password_Edittext.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.padlock, 0);
+                    password_Edittext.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_lock_black_24dp, 0);
                 }
                 else {
 
-                    password_Edittext.setCompoundDrawablesWithIntrinsicBounds(R.drawable.reqired, 0, R.drawable.padlock, 0);
+                    password_Edittext.setCompoundDrawablesWithIntrinsicBounds(R.drawable.reqired, 0, R.drawable.ic_lock_black_24dp, 0);
 
                 }
 
@@ -260,11 +260,11 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if(retypePassword_Edittext.getText().toString().length()>1) {
-                    retypePassword_Edittext.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.padlock, 0);
+                    retypePassword_Edittext.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_lock_black_24dp, 0);
                 }
                 else {
 
-                    retypePassword_Edittext.setCompoundDrawablesWithIntrinsicBounds(R.drawable.reqired, 0, R.drawable.padlock, 0);
+                    retypePassword_Edittext.setCompoundDrawablesWithIntrinsicBounds(R.drawable.reqired, 0, R.drawable.ic_lock_black_24dp, 0);
 
                 }
 

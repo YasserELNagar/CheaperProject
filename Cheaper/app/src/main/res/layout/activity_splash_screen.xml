@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     tools:context=".SplashScreenActivity"
     android:gravity="center_horizontal"
     android:orientation="vertical">
@@ -16,14 +17,28 @@
         android:layout_height="125dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="100dp"
-        android:src="@drawable/logo" />
+        android:src="@drawable/saleword" />
 
-
+    <ImageView
+        android:id="@+id/bag_Imageview"
+        android:layout_width="60dp"
+        android:layout_height="125dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/splashScreen_Imageview"
+        android:layout_marginStart="58dp"
+        android:src="@drawable/moneybag" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_below="@+id/splashScreen_Imageview"
+    android:background="@drawable/backgroun1"
+    android:layout_height="200dp"></LinearLayout>
     <ProgressBar
         android:id="@+id/splashScreen_Progresspar"
         style="?android:attr/progressBarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"/>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="57dp" />
 
-</LinearLayout>
+</RelativeLayout>

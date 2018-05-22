@@ -23,8 +23,11 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="35dp"
-            android:src="@drawable/user5"
+            android:src="@drawable/adduser"
             android:scaleType="fitXY"/>
+
+
+
 
 
         <EditText
@@ -33,12 +36,13 @@
             android:layout_height="50dp"
             android:hint="@string/Name"
             android:inputType="text"
+
             android:maxLines="1"
             android:singleLine="true"
             android:background="@drawable/edittext_border"
             android:paddingRight="10dp"
             android:layout_marginTop="25dp"
-            android:drawableStart="@drawable/user_male"
+            android:drawableStart="@drawable/ic_person_black_24dp"
             android:layoutDirection="rtl"
             android:drawablePadding="5dp"/>
 
@@ -56,7 +60,7 @@
 
             android:paddingLeft="5dp"
             android:paddingRight="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:drawableRight="@drawable/opened_email"
             android:layoutDirection="rtl"
             android:drawablePadding="5dp"/>
@@ -74,8 +78,8 @@
             android:drawableLeft="@drawable/reqired"
             android:paddingLeft="5dp"
             android:paddingRight="10dp"
-            android:layout_marginTop="10dp"
-            android:drawableRight="@drawable/smartphone_call"
+            android:layout_marginTop="20dp"
+            android:drawableRight="@drawable/smartphone"
             android:layoutDirection="rtl"
             android:drawablePadding="5dp"/>
 
@@ -92,8 +96,8 @@
             android:drawableLeft="@drawable/reqired"
             android:paddingLeft="5dp"
             android:paddingRight="10dp"
-            android:layout_marginTop="10dp"
-            android:drawableRight="@drawable/padlock"
+            android:layout_marginTop="20dp"
+            android:drawableRight="@drawable/ic_lock_black_24dp"
             android:layoutDirection="rtl"
             android:drawablePadding="5dp"/>
 
@@ -110,8 +114,8 @@
             android:drawableLeft="@drawable/reqired"
             android:paddingLeft="5dp"
             android:paddingRight="10dp"
-            android:layout_marginTop="10dp"
-            android:drawableRight="@drawable/padlock"
+            android:layout_marginTop="20dp"
+            android:drawableRight="@drawable/ic_lock_black_24dp"
             android:layoutDirection="rtl"
             android:drawablePadding="5dp"/>
 
@@ -119,7 +123,7 @@
 
         <Button
             android:id="@+id/signup_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:background="@drawable/buttonwithcorners"
@@ -127,7 +131,7 @@
             android:text="@string/Signup"
             android:textColor="@color/White"
             android:textSize="20dp"
-            android:textStyle="italic|normal|bold" />
+            android:textStyle="bold" />
 
 
 
