@@ -71,5 +71,9 @@
     <string name="NewAccount">حساب جديد</string>
     <string name="agreeonconditions">اوافق على الشروط والاحكام</string>
     <string name="SIGN">تسجيل</string>
+    <string name="SuccessRequest">لقد تم تسجيل طلبك بنجاح</string>
+    <string name="GoTo">ذهاب الى</string>
+    <string name="AddAds">إضافة إعلان</string>
+    <string name="MainPage">الرئيسية</string>
 
 </resources>

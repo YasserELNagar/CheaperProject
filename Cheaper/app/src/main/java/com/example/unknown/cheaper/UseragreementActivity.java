@@ -1,7 +1,9 @@
 package com.example.unknown.cheaper;
 
+import android.app.Dialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ExpandableListView;
@@ -47,6 +49,30 @@ public class UseragreementActivity extends AppCompatActivity {
         UserAgreementAdapter adapter = new UserAgreementAdapter(UseragreementActivity.this,AgreementHashmap);
 
         userAgreement_expandablelistview.setAdapter(adapter);
+
+
+        sign_btn. setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ConfirmUserAgreement();
+
+            }
+        });
+
+    }
+
+
+    //this method display dialog to user to confirm that request has been submitted
+    private void ConfirmUserAgreement() {
+
+        Dialog dialog = new Dialog(UseragreementActivity.this,R.style.Theme_Dialog);
+
+        dialog.setTitle(R.string.SuccessRequest);
+
+        dialog.setContentView(R.layout.special_confirmation_dilaog_layout);
+
+        dialog.show();
 
     }
 
