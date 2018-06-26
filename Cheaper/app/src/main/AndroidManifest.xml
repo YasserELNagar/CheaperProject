@@ -17,7 +17,7 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".ImageSlider.ProductDetailsActivity" />
         <activity android:name=".Navigation" />
-        <activity android:name=".AdvertiserDataEntery_Activity">
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +26,9 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
-        <activity android:name=".SplashScreenActivity"></activity>
+        <activity android:name=".AdvertiserDataEntery_Activity"></activity>
+
+        <activity android:name=".UseragreementActivity"></activity>
     </application>
 
 </manifest>
