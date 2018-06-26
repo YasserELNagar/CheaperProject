@@ -69,5 +69,7 @@
     <string name="Price_Aftter">السعر بعد العرض</string>
     <string name="SorrySigninFirstToCall">عفوا قم بتسجيل الدخول حتى يمكنك الاتصال</string>
     <string name="NewAccount">حساب جديد</string>
+    <string name="agreeonconditions">اوافق على الشروط والاحكام</string>
+    <string name="SIGN">تسجيل</string>
 
 </resources>
