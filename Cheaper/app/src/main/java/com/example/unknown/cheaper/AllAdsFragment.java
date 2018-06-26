@@ -27,13 +27,15 @@ public class AllAdsFragment extends Fragment {
 
         final ArrayList<AdsClass> allAds = new ArrayList<>();
 
-        allAds.add(new AdsClass("حزاء بناتي" , "مول",100,99.9));
-        allAds.add(new AdsClass("حزاء بناتي" , "مول",100,99.9));
-        allAds.add(new AdsClass("حزاء بناتي" , "مول",100,99.9));
-        allAds.add(new AdsClass("حزاء بناتي" , "مول",100,99.9));
-        allAds.add(new AdsClass("حزاء بناتي" , "مول",100,99.9));
-        allAds.add(new AdsClass("حزاء بناتي" , "مول",100,99.9));
-        allAds.add(new AdsClass("حزاء بناتي" , "مول",100,99.9));
+        allAds.add(new AdsClass("حزاء اديدس رياضى" , "مول العرب",4000,2000));
+        allAds.add(new AdsClass("حزاء اديدس رياضى" , "مول مصر",4000,2000));
+        allAds.add(new AdsClass("حزاء اديدس رياضى" , "مول مصر",4000,2000));
+        allAds.add(new AdsClass("حزاء اديدس رياضى" , "مول العرب",4000,2000));
+        allAds.add(new AdsClass("حزاء اديدس رياضى" , "مول مصر",4000,2000));
+        allAds.add(new AdsClass("حزاء اديدس رياضى" , "مول العرب",4000,2000));
+        allAds.add(new AdsClass("حزاء اديدس رياضى" , "مول مصر ",4000,2000));
+        allAds.add(new AdsClass("حزاء اديدس رياضى" , "مول العرب",4000,2000));
+
 
         GridView gridView =(GridView)view.findViewById(R.id.all_ads_gridView);
 

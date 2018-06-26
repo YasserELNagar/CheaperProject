@@ -8,12 +8,13 @@
     <TextView
         android:id="@+id/lblListHeader"
         android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         android:textColor="#000"
         android:text="اعاهخاهخاخها"
         android:paddingRight="10dp"
+        android:gravity="center|right"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"  />
+        android:layout_height="match_parent"  />
 
 </LinearLayout>
