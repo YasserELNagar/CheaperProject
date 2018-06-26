@@ -25,13 +25,13 @@
         android:layout_height="125dp"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/splashScreen_Imageview"
-        android:layout_marginStart="58dp"
+        android:layout_marginStart="70dp"
         android:src="@drawable/moneybag" />
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_below="@+id/splashScreen_Imageview"
+    android:layout_marginTop="250dp"
     android:background="@drawable/backgroun1"
-    android:layout_height="200dp"></LinearLayout>
+    android:layout_height="300dp"></LinearLayout>
     <ProgressBar
         android:id="@+id/splashScreen_Progresspar"
         style="?android:attr/progressBarStyle"

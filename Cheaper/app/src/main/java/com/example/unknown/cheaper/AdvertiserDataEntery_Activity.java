@@ -1,11 +1,16 @@
 package com.example.unknown.cheaper;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 public class AdvertiserDataEntery_Activity extends AppCompatActivity {
+
+    Button createNewAccount_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +25,15 @@ public class AdvertiserDataEntery_Activity extends AppCompatActivity {
         spinner.setAdapter(adapter);
 
 
-
+        // الشروط والاحكام
+        createNewAccount_btn=findViewById(R.id.conditionsaandterms);
+        createNewAccount_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdvertiserDataEntery_Activity.this,UseragreementActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

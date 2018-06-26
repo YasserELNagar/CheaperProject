@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".UseragreementActivity"
     android:orientation="vertical">
+    <include layout="@layout/actionbar2"></include>
 
     <ExpandableListView
         android:id="@+id/userAgreement_expandablelistview"
@@ -28,15 +29,22 @@
         <CheckBox
             android:id="@+id/userAgreement_checkbox"
             android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
             android:text="@string/agreeonconditions"/>
 
         <Button
             android:id="@+id/sign_btn"
             android:layout_gravity="center"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:background="@drawable/button2"
+            android:layout_marginTop="30dp"
             android:text="@string/SIGN"/>
 
     </LinearLayout>

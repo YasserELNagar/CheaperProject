@@ -27,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView forgetPassword_textView;
     Button signin_btn;
     Button createNewAccount_btn;
+    Button createNewAccount_btn_as_advisior;
 
     Button signinWithFacebook_btn;
 
@@ -59,7 +60,16 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+        //open sginup as Advisior
+        createNewAccount_btn_as_advisior.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent intent = new Intent(LoginActivity.this,AdvertiserDataEntery_Activity.class);
+                startActivity(intent);
+
+            }
+        });
         signinWithFacebook_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -136,6 +146,8 @@ public class LoginActivity extends AppCompatActivity {
         forgetPassword_textView=findViewById(R.id.forgetPassword_textView);
         signin_btn=findViewById(R.id.signin_btn);
         createNewAccount_btn=findViewById(R.id.createNewAccount_btn);
+        createNewAccount_btn_as_advisior=findViewById(R.id.createNewAccount_asAdviser_btn);
+
         signinWithFacebook_btn=findViewById(R.id.signin_facebookbtn);
 
     }

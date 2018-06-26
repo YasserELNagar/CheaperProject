@@ -25,7 +25,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
         bagimg=(ImageView)findViewById(R.id.bag_Imageview);
-        ObjectAnimator objectAnimatory=ObjectAnimator.ofFloat(bagimg,"y",230f);
+        ObjectAnimator objectAnimatory=ObjectAnimator.ofFloat(bagimg,"y",235f);
         objectAnimatory.setDuration(animation);
 
         AnimatorSet animatorSet=new AnimatorSet();

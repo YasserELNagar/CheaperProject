@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="#fff"
     android:layout_height="match_parent"
     tools:context="com.example.unknown.cheaper.ImageSlider.ProductDetailsActivity">
 
@@ -44,11 +45,21 @@
         android:orientation="vertical"
         android:background="#fff"
         android:layout_height="match_parent">
-
+        <TextView
+            android:layout_width="match_parent"
+            android:background="#ff0000"
+            android:textColor="#fff"
+            android:paddingRight="10dp"
+            android:text="50% توفيراكثر"
+            android:textSize="20dp"
+            android:layout_height="wrap_content" />
 <LinearLayout
     android:layout_width="match_parent"
     android:weightSum="3"
-    android:layout_margin="10dp"
+    android:layout_marginTop="40dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginBottom="10dp"
+android:layout_marginRight="10dp"
     android:orientation="horizontal"
     android:layout_height="wrap_content">
     <TextView
@@ -160,7 +171,10 @@
 
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_margin="10dp"
+    android:layout_marginTop="40dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginRight="10dp"
     android:orientation="vertical"
     android:layout_height="match_parent">
 
